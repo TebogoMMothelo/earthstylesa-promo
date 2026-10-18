@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juicy Reset: Summer Self-Care Box</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff0f1;--card:#ffffff;--ink:#2a1418;--muted:#7a5560;--line:#f1cdd3;
+  --flesh:#ff4d6a;--rind:#1f7a4d;--btn:#c4566b;--btn-ink:#ffffff;--seed:#2a1418;--pith:#f4ffe9;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1b1114;--card:#2a191e;--ink:#ffeef0;--muted:#d3aeb6;--line:#463036;
+    --flesh:#ff6b84;--rind:#4fc486;--btn:#ff6b84;--btn-ink:#2a1418;--seed:#1b1114;--pith:#d9f5c9;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1b1114;--card:#2a191e;--ink:#ffeef0;--muted:#d3aeb6;--line:#463036;
+  --flesh:#ff6b84;--rind:#4fc486;--btn:#ff6b84;--btn-ink:#2a1418;--seed:#1b1114;--pith:#d9f5c9;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,.display{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.05;margin:0}
+main{max-width:640px;margin:0 auto;padding:28px 20px 56px}
+.hero{display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center;margin-bottom:34px}
+.melon{width:min(280px,78%);height:auto;display:block}
+h1{font-size:clamp(44px,12vw,68px);letter-spacing:-.02em}
+.lede{margin:0;max-width:34ch;color:var(--muted);font-size:18px}
+.pill{display:inline-block;background:var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:600}
+h2{font-size:28px;margin:0 0 14px}
+section{margin-top:34px}
+.tier{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding:16px 0;border-top:2px solid var(--line)}
+.tier:last-of-type{border-bottom:2px solid var(--line)}
+.tier h3{margin:0;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:22px}
+.tier p{margin:0;color:var(--muted);font-size:15.5px;grid-column:1}
+.price{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:22px;text-align:right}
+.qty{grid-column:2;grid-row:2;display:flex;align-items:center;gap:10px;justify-self:end}
+.qty button{width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font-size:22px;line-height:1;cursor:pointer}
+.qty output{min-width:1.5ch;text-align:center;font-weight:700}
+label{display:block;font-weight:600;margin:16px 0 6px}
+input[type=text],input[type=tel],textarea{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+textarea{min-height:84px;resize:vertical}
+fieldset{border:0;padding:0;margin:16px 0 0}
+legend{font-weight:600;padding:0;margin-bottom:6px}
+.opt{display:flex;gap:10px;align-items:center;margin:6px 0;font-weight:400}
+.opt input{width:20px;height:20px;accent-color:var(--btn)}
+:focus-visible{outline:3px solid var(--btn);outline-offset:2px}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:26px;font-size:20px}
+.total strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:32px}
+.go{display:block;text-align:center;margin-top:14px;padding:16px;border-radius:12px;background:var(--btn);color:var(--btn-ink);font-weight:700;font-size:18px;text-decoration:none}
+.msg{margin:12px 0 0;font-size:15.5px;min-height:1.5em}
+.err{color:var(--btn)}
+.how{color:var(--muted);font-size:15.5px;padding-left:20px}
+.how li{margin:6px 0}
+footer{margin-top:40px;color:var(--muted);font-size:14.5px}
+@media (prefers-reduced-motion:no-preference){.qty button:active,.go:active{transform:scale(.97)}}
+.brandbar{align-self:stretch;background:#c4566b;border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:center}
+.logo{height:60px;width:auto;display:block}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="brandbar"><svg class="logo" viewBox="0 0 117 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EarthStyleSA logo">
+<path d="M114.637 39C115.942 39.0002 117 40.0582 117 41.3633V64.2256C117 65.5307 115.942 66.5887 114.637 66.5889H2.36328C1.05819 66.5887 0.000227959 65.5307 0 64.2256V41.3633C0.00019167 40.0582 1.05816 39.0002 2.36328 39H114.637ZM82.2188 48.374L86.876 59.2236L86.8389 59.3135C86.6255 59.7935 86.3858 60.134 86.1191 60.334C85.8659 60.5472 85.519 60.6533 85.0791 60.6533C84.7724 60.6533 84.4587 60.5936 84.1387 60.4736C83.8322 60.3537 83.5592 60.1868 83.3193 59.9736L82.1787 62.1934C82.5253 62.4999 82.9721 62.7398 83.5186 62.9131C84.0652 63.0864 84.6188 63.1738 85.1787 63.1738C85.832 63.1738 86.4257 63.074 86.959 62.874C87.5055 62.6741 87.9986 62.3271 88.4385 61.834C88.8917 61.3407 89.292 60.6604 89.6387 59.7939L94.499 48.374H91.499L88.459 55.6807L85.4385 48.374H82.2188ZM67.8691 44.8936C66.5494 44.8936 65.4493 45.0933 64.5693 45.4932C63.7029 45.8797 63.0494 46.4068 62.6094 47.0732C62.1827 47.7266 61.9688 48.4539 61.9688 49.2539C61.9688 50.0004 62.1159 50.6138 62.4092 51.0938C62.7158 51.5736 63.109 51.9606 63.5889 52.2539C64.0688 52.5472 64.5957 52.787 65.1689 52.9736C65.7556 53.1603 66.3359 53.3198 66.9092 53.4531C67.4957 53.5731 68.0289 53.7069 68.5088 53.8535C68.9888 53.9868 69.3756 54.1669 69.6689 54.3936C69.9622 54.6069 70.1093 54.9002 70.1094 55.2734C70.1094 55.5668 70.0158 55.827 69.8291 56.0537C69.6425 56.2803 69.3491 56.4604 68.9492 56.5938C68.5626 56.7137 68.0491 56.7734 67.4092 56.7734C66.5693 56.7734 65.7357 56.6406 64.9092 56.374C64.0959 56.094 63.389 55.7401 62.7891 55.3135L61.6885 57.7539C62.3151 58.2339 63.1423 58.6269 64.1689 58.9336C65.1955 59.2269 66.2688 59.374 67.3887 59.374C68.7218 59.374 69.8219 59.1733 70.6885 58.7734C71.5685 58.3734 72.2289 57.8467 72.6689 57.1934C73.1089 56.5401 73.3291 55.8198 73.3291 55.0332C73.3291 54.3002 73.1756 53.6937 72.8691 53.2139C72.5758 52.7339 72.1889 52.347 71.709 52.0537C71.2291 51.7604 70.6959 51.5268 70.1094 51.3535C69.5361 51.1802 68.9557 51.0269 68.3691 50.8936C67.7958 50.7602 67.269 50.6265 66.7891 50.4932C66.3091 50.3598 65.9222 50.187 65.6289 49.9736C65.3356 49.747 65.1885 49.4537 65.1885 49.0938C65.1885 48.7871 65.2759 48.5206 65.4492 48.2939C65.6225 48.054 65.9088 47.8605 66.3086 47.7139C66.7085 47.5672 67.2221 47.4932 67.8486 47.4932C68.4752 47.4932 69.1153 47.5868 69.7686 47.7734C70.4218 47.9468 71.0753 48.2205 71.7285 48.5938L72.7285 46.1338C72.0752 45.7205 71.322 45.4138 70.4688 45.2139C69.6155 45.0006 68.749 44.8936 67.8691 44.8936ZM23.1396 48.2139C22.2863 48.2139 21.4458 48.327 20.6191 48.5537C19.7926 48.7804 19.0856 49.1004 18.499 49.5137L19.6191 51.6934C20.0058 51.3867 20.4729 51.147 21.0195 50.9736C21.5795 50.787 22.1464 50.6934 22.7197 50.6934C23.5595 50.6934 24.1792 50.8806 24.5791 51.2539C24.9924 51.6272 25.1992 52.1469 25.1992 52.8135H22.7197C21.6265 52.8135 20.7395 52.9535 20.0596 53.2334C19.3796 53.5 18.8796 53.8736 18.5596 54.3535C18.253 54.8334 18.0997 55.3933 18.0996 56.0332C18.0996 56.6464 18.2592 57.2001 18.5791 57.6934C18.8991 58.1867 19.359 58.5807 19.959 58.874C20.5589 59.154 21.2792 59.2939 22.1191 59.2939C23.0658 59.2939 23.8395 59.1139 24.4395 58.7539C24.8462 58.5099 25.1642 58.1872 25.3994 57.79V59.1338H28.3193V52.9932C28.3193 51.3534 27.8656 50.1473 26.959 49.374C26.0524 48.6007 24.7795 48.2139 23.1396 48.2139ZM40.4297 45.9932V48.6133H38.7695V51.0137H40.4297V55.4336C40.4297 56.7136 40.7826 57.6807 41.4893 58.334C42.1959 58.9739 43.1827 59.2939 44.4492 59.2939C44.9291 59.2939 45.3892 59.2404 45.8291 59.1338C46.2824 59.0138 46.6693 58.8399 46.9893 58.6133L46.1494 56.4131C45.8028 56.6797 45.3829 56.8134 44.8896 56.8135C44.4763 56.8135 44.1492 56.6931 43.9092 56.4531C43.6694 56.1998 43.5498 55.8467 43.5498 55.3936V51.0137H46.2295V48.6133H43.5498V45.9932H40.4297ZM75.7031 45.9932V48.6133H74.043V51.0137H75.7031V55.4336C75.7031 56.7136 76.056 57.6807 76.7627 58.334C77.4693 58.9739 78.4562 59.2939 79.7227 59.2939C80.2025 59.2939 80.6626 59.2404 81.1025 59.1338C81.5559 59.0138 81.9427 58.8399 82.2627 58.6133L81.4229 56.4131C81.0762 56.6797 80.6563 56.8134 80.1631 56.8135C79.7498 56.8135 79.4226 56.6931 79.1826 56.4531C78.9428 56.1998 78.8232 55.8467 78.8232 55.3936V51.0137H81.5029V48.6133H78.8232V45.9932H75.7031ZM106.728 48.2139C105.634 48.2139 104.655 48.4537 103.788 48.9336C102.921 49.4003 102.234 50.0536 101.728 50.8936C101.234 51.7202 100.987 52.6739 100.987 53.7539C100.987 54.8204 101.241 55.7734 101.748 56.6133C102.255 57.4399 102.968 58.0932 103.888 58.5732C104.821 59.0532 105.901 59.2939 107.128 59.2939C108.101 59.2939 108.961 59.1468 109.708 58.8535C110.454 58.5469 111.074 58.1135 111.567 57.5537L109.907 55.7539C109.547 56.1003 109.148 56.3599 108.708 56.5332C108.281 56.7065 107.781 56.7939 107.208 56.7939C106.568 56.7939 106.007 56.6798 105.527 56.4531C105.061 56.2131 104.694 55.8734 104.428 55.4336C104.29 55.1869 104.191 54.92 104.128 54.6338H112.268C112.281 54.5006 112.294 54.3604 112.308 54.2139C112.321 54.054 112.328 53.9139 112.328 53.7939C112.328 52.634 112.081 51.6401 111.588 50.8135C111.095 49.9735 110.421 49.3336 109.567 48.8936C108.727 48.4403 107.781 48.2139 106.728 48.2139ZM5.66016 45.1338V59.1338H16.5V56.5332H8.87988V53.2939H15.3799V50.7734H8.87988V47.7334H16.2402V45.1338H5.66016ZM37.8232 48.2139C36.8099 48.2139 35.9498 48.4135 35.2432 48.8135C34.7901 49.0614 34.4172 49.3867 34.123 49.7881V48.374H31.1436V59.1338H34.2627V54.0537C34.2627 53.0272 34.5232 52.274 35.043 51.7939C35.5763 51.3006 36.2697 51.0537 37.123 51.0537C37.2429 51.0537 37.3563 51.0599 37.4629 51.0732C37.5696 51.0732 37.6899 51.0804 37.8232 51.0938V48.2139ZM48.7412 44.2939V59.1338H51.8604V53.8135C51.8604 53.147 51.9674 52.6004 52.1807 52.1738C52.4073 51.7472 52.714 51.4334 53.1006 51.2334C53.5005 51.0201 53.9472 50.9131 54.4404 50.9131C55.1337 50.9131 55.6677 51.1199 56.041 51.5332C56.4276 51.9465 56.621 52.5867 56.6211 53.4531V59.1338H59.7412V52.9736C59.7412 51.8805 59.5476 50.9872 59.1611 50.2939C58.7745 49.5873 58.2405 49.0667 57.5605 48.7334C56.8941 48.3869 56.1343 48.2139 55.2812 48.2139C54.3612 48.2139 53.5403 48.4073 52.8203 48.7939C52.458 48.9886 52.1382 49.2258 51.8604 49.5049V44.2939H48.7412ZM95.7725 44.2939V59.1338H98.8916V44.2939H95.7725ZM25.1992 55.7334C25.0126 56.2134 24.7131 56.5807 24.2998 56.834C23.8865 57.074 23.4194 57.1934 22.8994 57.1934C22.3528 57.1934 21.9196 57.0801 21.5996 56.8535C21.2929 56.6135 21.1397 56.2936 21.1396 55.8936C21.1396 55.5336 21.2724 55.2332 21.5391 54.9932C21.8191 54.7532 22.3262 54.6338 23.0596 54.6338H25.1992V55.7334ZM106.748 50.5732C107.281 50.5733 107.748 50.6937 108.147 50.9336C108.547 51.1603 108.861 51.4802 109.088 51.8936C109.238 52.1678 109.337 52.4747 109.388 52.8135H104.092C104.144 52.4803 104.241 52.1797 104.388 51.9131C104.614 51.4866 104.928 51.1602 105.328 50.9336C105.741 50.6937 106.215 50.5732 106.748 50.5732Z" fill="#FFFDFB"/>
+<path d="M109.045 66.5755C108.479 68.6143 107.458 70.4922 105.988 72.0745C102.577 75.7363 97.2025 77.1822 91.9252 75.8011C90.8652 75.5446 89.9335 75.3842 89.8344 75.4476C89.7703 75.5442 90.0598 76.2186 90.5102 76.9251C91.5076 78.467 92.3119 81.358 92.312 83.221C92.2797 88.8423 88.3538 94.978 83.1411 97.5159C74.9353 101.499 65.1845 95.5242 62.8354 85.0843C62.3849 83.0607 62.3201 81.7435 62.5131 77.6321C62.6418 74.8697 62.8033 72.0421 62.8998 71.3353L63.061 70.0511L62.6098 71.015C61.7088 72.943 60.3577 79.399 60.2289 82.4183C60.0359 85.9191 60.3896 87.7505 61.226 87.6868C61.644 87.6227 61.7091 87.8151 61.5483 88.6819C61.4196 89.3564 61.548 90.0955 61.9018 90.8021C62.2556 91.4764 62.2879 91.7335 62.0307 91.4769C61.355 90.8345 60.9692 91.0277 60.3256 92.2161C59.328 94.0471 56.1737 96.8092 53.8891 97.8372C49.3841 99.8929 44.6535 99.8607 40.5346 97.805C37.5421 96.3274 35.9973 94.7532 34.5815 91.7659C33.6162 89.7423 33.5844 89.4851 33.5844 85.5345C33.5844 83.298 33.552 81.4741 33.52 81.4544C33.5118 81.4583 32.71 81.8423 31.7817 82.3216C30.2051 83.1567 29.786 83.221 26.3432 83.221C23.0292 83.221 22.4173 83.1245 20.519 82.3216C16.3358 80.5548 12.8921 76.9567 11.5727 72.845C10.8836 70.7812 10.7797 68.6424 11.1821 66.5755H18.4223C17.6787 68.1489 17.5975 68.6853 17.7192 70.6292C17.8801 73.5522 18.8456 75.5761 21.0981 77.8568C23.5758 80.3301 25.7966 81.262 29.2397 81.262C32.8113 81.262 33.8096 80.7475 34.8393 78.4026C36.6413 74.4196 39.0547 71.721 44.5893 67.5452C45.0363 67.2081 45.4581 66.8759 45.8295 66.5755H52.5815C51.7703 67.4063 50.869 68.2925 49.8666 69.2474C44.7824 74.0657 42.4659 76.7972 40.9213 79.8167C40.1492 81.3905 40.0521 82.0008 40.02 84.5062C40.02 87.0759 40.1491 87.5899 40.9858 89.3245C42.1443 91.6051 44.2358 93.3398 46.8745 94.1429C49.5775 95.01 53.439 94.6893 56.1098 93.3724C58.0404 92.4087 60.1321 90.4488 60.1323 89.6136C60.132 89.4204 59.7456 88.393 59.2631 87.3655C58.5552 85.8237 58.3948 84.8917 58.2661 82.1937C58.1052 78.4353 58.4266 75.8972 59.9711 69.4085C60.2095 68.4058 60.4224 67.4636 60.6118 66.5755H67.4555C67.5084 67.7257 67.5336 69.0096 67.5336 70.4681C67.5336 82.0966 68.9174 87.0439 72.9399 89.9671C76.2864 92.3761 79.6652 92.6652 83.3979 90.8343C85.8434 89.6136 87.6782 87.718 88.9975 85.0198C89.7374 83.5425 89.8979 82.8032 89.8979 80.8118V78.4026L88.0639 78.178C85.1036 77.7925 82.2721 76.3144 79.7944 73.8411C77.8099 71.8073 76.7172 70.4032 74.4594 66.5755H77.4741C80.2863 71.7219 83.7527 75.584 87.0024 77.1175C89.0616 78.081 89.8983 77.9849 89.5766 76.8929C89.1583 75.5117 88.4821 74.8046 86.7768 73.8089C84.2669 72.3955 81.9498 70.3076 79.5043 67.2562C79.3247 67.0333 79.1428 66.8041 78.9594 66.5755H86.894C88.6094 67.9026 89.9613 68.6213 91.4428 69.1194C95.3598 70.457 99.5022 69.3821 102.138 66.5755H109.045ZM44.31 66.5755C42.6313 67.4516 40.6159 68.5944 39.3442 69.4407C36.609 71.2075 33.8735 74.1629 32.5864 76.7005C31.9763 77.8865 31.4299 78.881 31.3637 78.8851C31.2994 78.8848 31.3962 78.1133 31.5571 77.1819C32.2806 73.2582 34.5404 70.1284 39.5278 66.5755H44.31ZM69.3998 0.182922C76.608 -0.909107 83.2376 2.97822 85.1039 9.43488C85.876 12.0049 85.5857 17.337 84.5561 19.9388C82.915 24.1788 80.5334 27.0384 75.1918 31.2464C73.2641 32.7538 71.7218 34.037 71.7172 34.1048C71.718 34.4255 76.4479 31.9526 79.1186 30.2181C82.1109 28.2587 84.0417 26.4596 85.5219 24.179C87.1307 21.7701 87.2268 20.9671 85.9721 21.2239C85.1037 21.4166 85.1041 21.3843 86.3266 20.3245C88.5471 18.3651 93.8566 17.7868 97.5893 19.1038C102.77 20.9349 106.149 24.2433 107.726 28.9974C108.861 32.395 108.39 35.9112 106.715 39.0003H98.2114C98.2942 38.9224 98.3768 38.8437 98.4584 38.763C102.352 34.8762 102.641 29.5757 99.2621 25.1429C97.2027 22.4447 93.1479 20.4204 89.8979 20.4202C87.9676 20.4203 87.7096 20.614 87.1948 22.7982C85.9396 27.8732 82.432 31.3745 73.4868 36.4818C71.9364 37.3672 70.5505 38.2014 69.3012 39.0003H61.3002C61.4871 38.6318 61.6872 38.263 61.9018 37.8958C62.4169 36.9962 65.5067 33.6227 68.9819 30.1536C77.5412 21.6414 79.3758 18.7178 78.9897 14.1243C78.6679 10.0128 77.0909 7.53896 73.7446 5.9007C71.8782 4.96917 71.2017 4.84092 68.8207 4.77667C65.6996 4.68031 64.0905 5.09822 61.7416 6.60773C59.5535 8.02109 59.3925 8.4063 60.3256 9.81964C61.9667 12.293 62.5131 14.5103 62.5131 18.4935C62.4809 22.3479 62.4493 22.6376 59.6498 33.2698C59.147 35.152 58.7689 37.1326 58.5268 39.0003H53.1586L52.892 38.2493L52.8598 28.6116C52.8276 22.9263 52.6661 18.3649 52.4409 17.4651C50.9284 10.9444 47.26 7.44283 41.9506 7.44269C40.1809 7.41058 39.3116 7.60318 37.8637 8.27765C34.1632 10.0123 31.557 13.3856 30.7846 17.4329C30.3341 19.9062 30.5912 20.9991 31.7495 21.2562C33.7768 21.7703 37.1885 23.7941 38.894 25.5286C40.9854 27.6486 42.5621 29.9942 46.4555 36.7073C46.9242 37.5142 47.3852 38.2775 47.8364 39.0003H38.558C31.9796 32.3467 29.4744 30.5526 25.9575 29.7689C24.1877 29.3513 20.6476 29.8332 19.0063 30.6683C16.0264 32.2058 14.1538 35.4434 13.7807 39.0003H9.2182C8.58533 34.4692 9.86536 29.7799 13.1498 26.7171C16.8505 23.2479 22.032 22.1555 27.5668 23.6331C32.2647 24.9181 36.1264 27.9055 40.5991 33.8157C41.6922 35.26 42.6571 36.3197 42.6909 36.1292C42.819 35.7751 40.2131 30.8608 38.7973 28.7728C35.869 24.5325 30.8811 20.6779 31.3959 23.055C31.5244 23.6327 31.3308 23.5357 30.4623 22.5403C28.7249 20.4523 28.1777 16.63 29.0786 12.7435C31.299 3.36357 41.0502 -1.84058 49.0307 2.07843C51.4119 3.26727 54.8549 6.70395 56.142 9.20929C56.5923 10.1081 57.0746 10.7507 57.2358 10.5911C57.3646 10.4301 57.7187 9.56241 58.0082 8.63116C59.2956 4.71228 64.3478 0.986015 69.3998 0.182922ZM59.7778 10.3665C59.2629 9.17808 58.7162 9.27392 58.0727 10.7191C57.5579 11.8754 57.5578 12.1329 58.0082 14.4134C58.6518 17.4971 58.6518 20.3884 58.0082 24.9495C57.7508 26.909 57.5904 28.6767 57.6547 28.8694C57.8489 29.4106 59.4246 24.3705 60.1645 20.9026C61.0333 16.7269 60.9039 13.2575 59.7778 10.3665Z" fill="#FFFDFB"/>
+</svg></div>
+    <svg class="melon" viewBox="0 0 260 144" role="img" aria-label="Slice of watermelon"><defs><radialGradient id="fl" cx="50%" cy="100%" r="100%"><stop offset="0" stop-color="#ff3d5f"/><stop offset=".7" stop-color="#ff5a76"/><stop offset="1" stop-color="#ff8fa0"/></radialGradient></defs><path d="M10 140A120 120 0 0 1 250 140Z" fill="#2f7d4a"/><path d="M14 140A116 116 0 0 1 246 140" fill="none" stroke="#56a86c" stroke-width="3" stroke-linecap="round" opacity=".7"/><path d="M18 140A112 112 0 0 1 242 140Z" fill="#e9f7d2"/><path d="M26 140A104 104 0 0 1 234 140Z" fill="url(#fl)"/><path d="M52 112Q60 82 88 62" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".35"/><g fill="#2a1418"><path transform="translate(61 103) rotate(-62)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(90 73) rotate(-31)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(130 62)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(170 73) rotate(31)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(199 103) rotate(62)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(94 108) rotate(-48)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(117 94) rotate(-16)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(143 94) rotate(16)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/><path transform="translate(166 108) rotate(48)" d="M0 -8C5 -3 5 4 0 8C-5 4 -5 -3 0 -8Z"/></g></svg>
+    <span class="pill" id="deadline"></span>
+    <h1>Juicy Reset</h1>
+    <p class="lede">A watermelon summer self-care box. Small batches, made by hand, ready to gift or keep.</p>
+  </header>
+
+  <section aria-labelledby="pick">
+    <h2 id="pick">Pick your box</h2>
+    <div id="tiers"></div>
+  </section>
+
+  <section aria-labelledby="you">
+    <h2 id="you">Your details</h2>
+    <label for="name">Your name</label>
+    <input type="text" id="name" autocomplete="name">
+    <label for="phone">Phone number</label>
+    <input type="tel" id="phone" autocomplete="tel">
+    <fieldset>
+      <legend>How do you want to get it?</legend>
+      <label class="opt"><input type="radio" name="how" value="delivery" checked> Delivery</label>
+      <label class="opt"><input type="radio" name="how" value="collection"> Collection</label>
+    </fieldset>
+    <div id="addrWrap">
+      <label for="addr">Delivery address</label>
+      <textarea id="addr" autocomplete="street-address"></textarea>
+    </div>
+    <label for="gift">Gift message (optional)</label>
+    <textarea id="gift" placeholder="We'll write it on the card"></textarea>
+
+    <div class="total" aria-live="polite"><span id="count">No boxes yet</span><strong id="total">R0</strong></div>
+    <a class="go" id="go" href="#">Send my order by email</a>
+    <p class="msg" id="msg" role="status"></p>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <ol class="how">
+      <li>Choose your boxes and send the order. It opens in your email app, ready to send.</li>
+      <li>We confirm your order by email and send you a payment link. You pay online using that link.</li>
+      <li>Your box is made after pre-orders close and arrives from <span id="deliv"></span>.</li>
+    </ol>
+  </section>
+  <footer id="foot"></footer>
+</main>
+
+<script>
+// ---- Edit these before sharing ----
+const CONFIG = {
+  brand: "EarthStyleSA",
+  email: "earthstylesaofficial@gmail.com",   // orders are sent to this address
+  closes: "20 November",
+  deliveryFrom: "1 December",
+  tiers: [
+    { id: "mini", name: "Just a Slice", price: 200, text: "Mini watermelon scrub and 1 shower steamer. A small treat or stocking filler." },
+    { id: "sig",  name: "Juicy Reset", price: 350, text: "Watermelon scrub, bath bomb, 2 shower steamers and a summer ritual card." },
+    { id: "deluxe", name: "The Whole Melon", price: 650, text: "Everything in Juicy Reset, plus a watermelon candle, in a gift box." }
+  ]
+};
+// -----------------------------------
+
+const $ = id => document.getElementById(id);
+const qty = {}; CONFIG.tiers.forEach(t => qty[t.id] = 0);
+const R = n => "R" + n.toLocaleString("en-ZA");
+
+$("deadline").textContent = "Pre-orders close " + CONFIG.closes + ". Limited numbers.";
+$("deliv").textContent = CONFIG.deliveryFrom;
+$("foot").textContent = CONFIG.brand + ". Made in small batches.";
+
+
+CONFIG.tiers.forEach(t => {
+  const row = document.createElement("div"); row.className = "tier";
+  const h = document.createElement("h3"); h.textContent = t.name;
+  const p = document.createElement("div"); p.className = "price"; p.textContent = R(t.price);
+  const d = document.createElement("p"); d.textContent = t.text;
+  const q = document.createElement("div"); q.className = "qty";
+  const minus = document.createElement("button"); minus.type = "button"; minus.textContent = "−"; minus.setAttribute("aria-label","One less " + t.name);
+  const out = document.createElement("output"); out.textContent = "0"; out.id = "q-" + t.id;
+  const plus = document.createElement("button"); plus.type = "button"; plus.textContent = "+"; plus.setAttribute("aria-label","One more " + t.name);
+  minus.onclick = () => { qty[t.id] = Math.max(0, qty[t.id] - 1); update(); };
+  plus.onclick = () => { qty[t.id] = Math.min(20, qty[t.id] + 1); update(); };
+  q.append(minus, out, plus);
+  row.append(h, p, d, q);
+  $("tiers").appendChild(row);
+});
+
+function order() {
+  const lines = CONFIG.tiers.filter(t => qty[t.id] > 0).map(t => "• " + qty[t.id] + " × " + t.name + " (" + R(qty[t.id] * t.price) + ")");
+  const total = CONFIG.tiers.reduce((s, t) => s + qty[t.id] * t.price, 0);
+  const count = CONFIG.tiers.reduce((s, t) => s + qty[t.id], 0);
+  return { lines, total, count };
+}
+const method = () => document.querySelector('input[name="how"]:checked').value;
+
+function update() {
+  const o = order();
+  CONFIG.tiers.forEach(t => $("q-" + t.id).textContent = qty[t.id]);
+  $("total").textContent = R(o.total);
+  $("count").textContent = o.count ? o.count + (o.count === 1 ? " box" : " boxes") : "No boxes yet";
+  $("addrWrap").style.display = method() === "delivery" ? "" : "none";
+  let msg = "Hi " + CONFIG.brand + "! I'd like to pre-order:\n" + o.lines.join("\n") + "\n\nTotal: " + R(o.total) +
+    "\n\nName: " + $("name").value.trim() + "\nPhone: " + $("phone").value.trim() + "\n" +
+    (method() === "delivery" ? "Delivery address: " + $("addr").value.trim() : "Collection");
+  if ($("gift").value.trim()) msg += "\nGift message: " + $("gift").value.trim();
+  $("go").href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Pre-order from " + ($("name").value.trim() || "a customer")) + "&body=" + encodeURIComponent(msg);
+}
+
+function say(text, bad) { const m = $("msg"); m.textContent = text; m.className = "msg" + (bad ? " err" : ""); }
+
+$("go").addEventListener("click", e => {
+  update();
+  const o = order();
+  let problem = "";
+  if (!o.count) problem = "Choose at least one box first.";
+  else if (!$("name").value.trim()) problem = "Add your name.";
+  else if (!$("phone").value.trim()) problem = "Add your phone number.";
+  else if (method() === "delivery" && !$("addr").value.trim()) problem = "Add your delivery address, or choose collection.";
+  if (problem) { e.preventDefault(); say(problem, true); return; }
+  say("Your email app should open with your order ready. Press send to finish. If nothing opens, email your order to " + CONFIG.email + ". We'll confirm it and email you a payment link.", false);
+});
+
+document.querySelectorAll("input, textarea").forEach(el => el.addEventListener("input", update));
+document.querySelectorAll('input[name="how"]').forEach(el => el.addEventListener("change", update));
+update();
+</script>
+</body>
+</html>
